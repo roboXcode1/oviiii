@@ -4,27 +4,27 @@ export default function StatsSection() {
   const stats = [
     {
       icon: Layers,
-      value: "Multi-Tenant",
-      label: "SaaS Architecture Specialist",
-      desc: "Isolated data, scalable roles & robust cloud systems",
+      value: "AIUB",
+      label: "CSE Undergraduate",
+      desc: "B.Sc. in Computer Science & Engineering · Expected 2027",
     },
     {
       icon: Code,
-      value: "10+",
-      label: "Full-Stack Web Projects",
-      desc: "Production applications built with React & modern stacks",
+      value: "3.50",
+      label: "Current CGPA",
+      desc: "Undergraduate studies at AIUB",
     },
     {
       icon: Users,
-      value: "50+",
-      label: "Developers Mentored",
-      desc: "Live conceptual sessions & hands-on code workshops",
+      value: "5.00",
+      label: "HSC GPA",
+      desc: "Chowmuhani Govt. S.A. College · 2022",
     },
     {
       icon: Sparkles,
-      value: "100%",
-      label: "Responsive & Performant",
-      desc: "Smooth animations, accessible UI & modern code standards",
+      value: "4.78",
+      label: "SSC GPA",
+      desc: "Ramgati B.B.J. Pilot Model High School · 2020",
     },
   ];
 

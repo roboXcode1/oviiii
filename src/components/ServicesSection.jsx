@@ -4,13 +4,13 @@ export default function ServicesSection() {
   const services = [
     {
       icon: Cloud,
-      title: "Multi-Tenant SaaS Development",
+      title: "Full-Stack Web Development",
       description:
-        "Architecting enterprise-grade SaaS platforms featuring tenant isolation, sub-domain routing, custom RBAC permissions, and automated client billing pipelines.",
+        "Building web applications with frontend and backend technologies to meet practical user needs.",
       highlights: [
-        "Tenant-scoped databases and schemas",
-        "Role-based permission architecture",
-        "Automated data export & lead pipelines",
+        "Frontend interfaces",
+        "Backend features and APIs",
+        "Database integration",
       ],
       badge: "Flagship Expertise",
     },
@@ -18,11 +18,11 @@ export default function ServicesSection() {
       icon: Zap,
       title: "Interactive & Animated Web Apps",
       description:
-        "Building fluid, high-conversion web experiences with GSAP, Framer Motion, and canvas frame scrubbing that captivate users while maintaining sub-second load times.",
+        "Applying careful testing and debugging habits to find and fix issues in web applications.",
       highlights: [
-        "Hardware-accelerated animations",
-        "Virtual smooth scroll (Lenis) integration",
-        "Ultra-responsive mobile-first designs",
+        "Feature testing",
+        "Debugging and error handling",
+        "Thoughtful user-focused solutions",
       ],
       badge: "Creative Engineering",
     },
@@ -30,11 +30,11 @@ export default function ServicesSection() {
       icon: ShieldCheck,
       title: "Full-Stack API & System Architecture",
       description:
-        "Developing secure, resilient Node.js and Express backends integrated with MongoDB and PostgreSQL databases, complete with JWT security and rate limiting.",
+        "Designing relational databases and writing SQL queries to store, retrieve, and update application data.",
       highlights: [
-        "RESTful API design and documentation",
-        "Data modeling & optimized queries",
-        "State synchronization and caching",
+        "Relational database design",
+        "SQL queries",
+        "MySQL integration",
       ],
       badge: "Core Engineering",
     },
@@ -42,11 +42,11 @@ export default function ServicesSection() {
       icon: GraduationCap,
       title: "Technical Training & Mentorship",
       description:
-        "Delivering comprehensive conceptual sessions and personalized mentorship in React, JavaScript, and modern web application development.",
+        "Completed Programming Hero's online web development course and regularly practise programming challenges.",
       highlights: [
-        "Interactive live coding workshops",
-        "Architecture & code review sessions",
-        "Career guidance for junior developers",
+        "Programming Hero web development course",
+        "Regular LeetCode practice",
+        "BUP CTF-26 participant",
       ],
       badge: "Education",
     },
@@ -65,7 +65,7 @@ export default function ServicesSection() {
             How I Can <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">Help You</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-400">
-            From founding SaaS ventures to scaling full-stack platforms and coaching developers, here is what I bring to the table.
+            Web development, database design, and ongoing technical learning.
           </p>
         </div>
 

@@ -1,21 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X, Mail, ArrowUpRight } from "lucide-react";
 import { GithubIcon } from "./Icons";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const navLinks = [
-    { name: "Experience", href: "#experience" },
+    { name: "Education", href: "#education" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
@@ -34,13 +25,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/75 backdrop-blur-md border-b border-white/10 py-3 shadow-lg shadow-black/50"
-          : "bg-transparent py-5"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#202020] py-3 shadow-lg shadow-black/20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo & Availability Status */}
           <a
@@ -48,15 +35,15 @@ export default function Navbar() {
             className="flex items-center gap-3 group text-white decoration-none"
           >
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 to-cyan-400 flex items-center justify-center font-bold text-black text-lg shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-              FP
+              OC
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-sm tracking-wide text-white group-hover:text-cyan-400 transition-colors">
-                MD FAHIM PRODHAN
+                OVI CHOWDHURY
               </span>
               <span className="text-[11px] text-zinc-400 flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                Available for Work
+                CSE Undergraduate · AIUB
               </span>
             </div>
           </a>
@@ -78,7 +65,7 @@ export default function Navbar() {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://github.com/Fahim-Prodhan"
+              href="https://github.com/roboXcode1"
               target="_blank"
               rel="noreferrer"
               className="p-2 text-zinc-400 hover:text-white hover:bg-white/10 rounded-full transition-colors"
@@ -100,7 +87,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <a
-              href="https://github.com/Fahim-Prodhan"
+              href="https://github.com/roboXcode1"
               target="_blank"
               rel="noreferrer"
               className="p-2 text-zinc-400 hover:text-white"
@@ -140,13 +127,13 @@ export default function Navbar() {
               onClick={(e) => handleNavClick(e, "#contact")}
               className="w-full text-center py-2.5 bg-cyan-400 text-black font-semibold rounded-xl text-sm hover:bg-cyan-300 transition-colors"
             >
-              Contact Fahim
+              Contact Ovi
             </a>
             <a
-              href="mailto:fahimprodhan0@gmail.com"
+              href="mailto:ovichowdhuryflixy@gmail.com"
               className="w-full text-center py-2 text-zinc-400 hover:text-white text-xs flex items-center justify-center gap-1.5"
             >
-              <Mail className="w-4 h-4" /> fahimprodhan0@gmail.com
+              <Mail className="w-4 h-4" /> ovichowdhuryflixy@gmail.com
             </a>
           </div>
         </div>

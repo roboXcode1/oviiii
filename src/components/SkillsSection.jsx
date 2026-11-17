@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cpu, Layout, Server, Database, Wrench } from "lucide-react";
+import { Cpu, Layout, Server, Database, Wrench, ShieldCheck } from "lucide-react";
 
 export default function SkillsSection() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -7,66 +7,74 @@ export default function SkillsSection() {
   const categories = [
     { id: "all", label: "All Skills" },
     { id: "frontend", label: "Frontend", icon: Layout },
-    { id: "backend", label: "Backend & SaaS", icon: Server },
+    { id: "backend", label: "Backend", icon: Server },
     { id: "database", label: "Databases & Data", icon: Database },
-    { id: "tools", label: "DevOps & Tools", icon: Wrench },
+    { id: "tools", label: "Programming", icon: Wrench },
+    { id: "quality", label: "Testing & Security", icon: ShieldCheck },
   ];
 
   const skillGroups = [
     {
       category: "frontend",
-      title: "Frontend Engineering",
+      title: "Frontend",
       icon: Layout,
       color: "from-cyan-500/20 to-blue-500/10",
       borderColor: "hover:border-cyan-500/40",
       skills: [
-        { name: "React 19", level: "Expert", desc: "Hooks, Server/Client components, Concurrent rendering" },
-        { name: "JavaScript (ES6+)", level: "Advanced", desc: "Async/Await, Closures, DOM APIs, Modular JS" },
-        { name: "Tailwind CSS v4", level: "Expert", desc: "Modern styling, design systems, dark modes" },
-        { name: "GSAP & ScrollTrigger", level: "Advanced", desc: "Canvas sequences, scrub animations, pinning" },
-        { name: "Framer Motion", level: "Advanced", desc: "Smooth layout transitions, spring physics, gesture UI" },
-        { name: "Responsive UI/UX", level: "Expert", desc: "Mobile-first layouts, accessible markup, typography" },
+        { name: "HTML", level: "Working knowledge", desc: "Building structured web pages" },
+        { name: "CSS", level: "Working knowledge", desc: "Styling web interfaces" },
+        { name: "Next.js", level: "Working knowledge", desc: "Frontend and server-side web development" },
       ],
     },
     {
       category: "backend",
-      title: "Backend & Multi-Tenant SaaS",
+      title: "Backend Development",
       icon: Server,
       color: "from-emerald-500/20 to-teal-500/10",
       borderColor: "hover:border-emerald-500/40",
       skills: [
-        { name: "Multi-Tenant Architecture", level: "Specialist", desc: "Tenant data isolation, domain routing, scalability" },
-        { name: "Node.js & Express", level: "Advanced", desc: "Robust microservices, modular middleware, async handlers" },
-        { name: "RESTful API Design", level: "Expert", desc: "Clean endpoints, payload validation, status codes" },
-        { name: "Authentication & RBAC", level: "Advanced", desc: "JWT, session security, multi-role permissions" },
-        { name: "Data Pipelines & Export", level: "Advanced", desc: "CSV generation, automated lead management workflows" },
-        { name: "API Security & Rate Limiting", level: "Advanced", desc: "CORS, sanitize inputs, attack mitigation" },
+        { name: "PHP", level: "Working knowledge", desc: "Server-side web development" },
+        { name: "Node.js", level: "Working knowledge", desc: "Server-side JavaScript" },
+        { name: ".NET Framework", level: "Working knowledge", desc: "Backend development" },
+        { name: "Server-side APIs", level: "Experience", desc: "Next.js API and server-side features" },
+        { name: "User Authentication", level: "Experience", desc: "Login, authentication, and session handling" },
       ],
     },
     {
       category: "database",
-      title: "Databases & Data Analytics",
+      title: "Database",
       icon: Database,
       color: "from-purple-500/20 to-indigo-500/10",
       borderColor: "hover:border-purple-500/40",
       skills: [
-        { name: "MongoDB & Mongoose", level: "Advanced", desc: "Document schemas, aggregations, indexing" },
-        { name: "PostgreSQL & SQL", level: "Proficient", desc: "Relational data schema, joins, transactions" },
-        { name: "Recharts & Visual Data", level: "Advanced", desc: "Interactive charts, trend analysis dashboards" },
-        { name: "State Architecture", level: "Advanced", desc: "React Context, LocalStorage persistence, optimistics" },
+        { name: "MySQL", level: "Working knowledge", desc: "Relational data storage and management" },
+        { name: "Relational Database Design", level: "Experience", desc: "Tables, relationships, and schemas" },
+        { name: "SQL", level: "Experience", desc: "Queries to store, retrieve, and update data" },
       ],
     },
     {
       category: "tools",
-      title: "DevOps, Tools & Workflow",
+      title: "Programming & Problem Solving",
       icon: Wrench,
       color: "from-amber-500/20 to-orange-500/10",
       borderColor: "hover:border-amber-500/40",
       skills: [
-        { name: "Git & GitHub", level: "Expert", desc: "Version control, branching, PR reviews, merge workflows" },
-        { name: "Vite & Sharp", level: "Advanced", desc: "Ultra-fast bundling, frame optimization scripts" },
-        { name: "Linux & Bash", level: "Advanced", desc: "Terminal automation, shell scripting, server administration" },
-        { name: "Postman", level: "Advanced", desc: "API testing, environment variables, documentation" },
+        { name: "JavaScript", level: "Working knowledge", desc: "Programming and web development" },
+        { name: "Java", level: "Working knowledge", desc: "Object-oriented programming" },
+        { name: "LeetCode", level: "Regular practice", desc: "Algorithmic problem solving" },
+      ],
+    },
+    {
+      category: "quality",
+      title: "Testing & Security Practices",
+      icon: ShieldCheck,
+      color: "from-sky-500/20 to-cyan-500/10",
+      borderColor: "hover:border-sky-500/40",
+      skills: [
+        { name: "Feature Testing", level: "Experience", desc: "Testing application features to catch issues early" },
+        { name: "Debugging", level: "Experience", desc: "Finding and fixing application errors" },
+        { name: "Error Handling", level: "Experience", desc: "Handling errors during application development" },
+        { name: "CTF Challenges", level: "Participant", desc: "Basic security awareness and analytical practice" },
       ],
     },
   ];
@@ -89,7 +97,7 @@ export default function SkillsSection() {
             Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">Technologies</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-400">
-            A comprehensive toolkit designed for building production-grade web systems, high-speed interfaces, and resilient SaaS architectures.
+            Technologies and practices used across web development, databases, and problem solving.
           </p>
 
           {/* Interactive Filter Pills */}

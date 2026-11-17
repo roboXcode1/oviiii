@@ -1,11 +1,10 @@
 import SmoothScroll from "./components/SmoothScroll";
-import ScrollSequence from "./components/ScrollSequence";
 import HeroContent from "./components/HeroContent";
-import AboutContent from "./components/AboutContent";
 import Navbar from "./components/Navbar";
 import StatsSection from "./components/StatsSection";
 import ExperienceSection from "./components/ExperienceSection";
 import SkillsSection from "./components/SkillsSection";
+import IntroductionVideo from "./components/IntroductionVideo";
 import ProjectsSection from "./components/ProjectsSection";
 import ServicesSection from "./components/ServicesSection";
 import ContactSection from "./components/ContactSection";
@@ -18,12 +17,8 @@ export default function App() {
         {/* Navigation Bar */}
         <Navbar />
 
-        {/* 1. Hero Canvas Sequence */}
-        <div id="hero" className="relative">
-          <ScrollSequence name="hero" frameCount={144} scrollLength={4000}>
-            {(progress) => <HeroContent progress={progress} />}
-          </ScrollSequence>
-        </div>
+        {/* 1. Intro Banner */}
+        <HeroContent />
 
         {/* 2. Key Metrics & Impact */}
         <StatsSection />
@@ -31,12 +26,8 @@ export default function App() {
         {/* 3. Work Experience & Leadership */}
         <ExperienceSection />
 
-        {/* 4. About Canvas Sequence (Moved after Work Experience) */}
-        <div id="about" className="relative">
-          <ScrollSequence name="about" frameCount={96} scrollLength={3500}>
-            {(progress) => <AboutContent progress={progress} />}
-          </ScrollSequence>
-        </div>
+        {/* Introduction video, before skills */}
+        <IntroductionVideo />
 
         {/* 5. Technical Stack & Skills */}
         <SkillsSection />

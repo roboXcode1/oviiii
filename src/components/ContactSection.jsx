@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Copy, Check, Send } from "lucide-react";
+import { Mail, MapPin, Copy, Check, Send, Phone } from "lucide-react";
 import { GithubIcon } from "./Icons";
 
 export default function ContactSection() {
@@ -13,7 +13,7 @@ export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  const email = "fahimprodhan0@gmail.com";
+  const email = "ovichowdhuryflixy@gmail.com";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -48,7 +48,7 @@ export default function ContactSection() {
             Let's Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">Extraordinary</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-400">
-            Have a SaaS idea, an interactive web project, or looking for a full-stack engineer? Feel free to reach out.
+            Interested in working together or discussing a web development project? Feel free to reach out.
           </p>
         </div>
 
@@ -64,10 +64,10 @@ export default function ContactSection() {
                 </span>
               </div>
               <h3 className="text-xl font-bold text-white">
-                Open for SaaS & Full-Stack Opportunities
+                Open to Web Development Opportunities
               </h3>
               <p className="text-sm text-zinc-400 mt-2 leading-relaxed">
-                Whether you need technical consulting, multi-tenant SaaS architecture, or a production React app, I respond within 24 hours.
+                Get in touch about frontend or backend web development, projects, or collaboration.
               </p>
             </div>
 
@@ -112,7 +112,7 @@ export default function ContactSection() {
 
               {/* GitHub item */}
               <a
-                href="https://github.com/Fahim-Prodhan"
+                href="https://github.com/roboXcode1"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-between p-4 rounded-2xl bg-zinc-900/50 border border-white/10 hover:border-cyan-500/30 transition-colors group"
@@ -126,13 +126,23 @@ export default function ContactSection() {
                       GitHub Profile
                     </div>
                     <div className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                      github.com/Fahim-Prodhan
+                      github.com/roboXcode1
                     </div>
                   </div>
                 </div>
                 <span className="text-xs text-zinc-400 group-hover:text-white transition-colors">
                   Visit →
                 </span>
+              </a>
+
+              <a href="tel:+8801308718861" className="flex items-center gap-3 p-4 rounded-2xl bg-zinc-900/50 border border-white/10 hover:border-cyan-500/30 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-[11px] uppercase tracking-wider text-zinc-400 font-medium">Phone</div>
+                  <div className="text-sm font-semibold text-white">01308718861</div>
+                </div>
               </a>
 
               {/* Location item */}
@@ -145,7 +155,7 @@ export default function ContactSection() {
                     Location & Timezone
                   </div>
                   <div className="text-sm font-semibold text-white">
-                    Bangladesh (GMT+6) • Remote Worldwide
+                    Bashundhara Residential Area, Dhaka, Bangladesh
                   </div>
                 </div>
               </div>
@@ -164,7 +174,7 @@ export default function ContactSection() {
                     Message Sent Successfully!
                   </h3>
                   <p className="text-sm text-zinc-300 max-w-md mx-auto">
-                    Thank you for reaching out. Fahim has received your inquiry and will reply to <span className="text-cyan-300 font-semibold">{email}</span> as soon as possible.
+                    Thank you for reaching out. Ovi will reply to <span className="text-cyan-300 font-semibold">{email}</span> as soon as possible.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -254,7 +264,7 @@ export default function ContactSection() {
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        <span>Send Message to Fahim</span>
+                        <span>Send Message to Ovi</span>
                       </>
                     )}
                   </button>

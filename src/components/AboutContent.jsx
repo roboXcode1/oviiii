@@ -23,13 +23,13 @@ export default function AboutContent({ progress }) {
       >
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-xs font-semibold mb-3">
           <Code2 className="w-3.5 h-3.5" />
-          Philosophy & Vision
+          About Me
         </div>
         <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
-          I build solutions to real-world problems through code.
+          I build practical web solutions for real business needs.
         </h2>
         <p className="mt-4 text-base sm:text-xl text-zinc-300 font-light">
-          Translating complex business requirements into fluid, accessible, and resilient digital architectures.
+          I study Computer Science and Engineering at the American International University-Bangladesh and work across frontend and backend development.
         </p>
       </motion.div>
 
@@ -40,18 +40,18 @@ export default function AboutContent({ progress }) {
       >
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/30 text-teal-300 text-xs font-semibold mb-3">
           <Rocket className="w-3.5 h-3.5" />
-          Engineer & Instructor
+          Developer & Learner
         </div>
         <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white leading-snug">
-          Full Stack Developer & Technical Web Instructor.
+          Web Developer focused on thoughtful, reliable applications.
         </h3>
         <p className="mt-4 text-sm sm:text-lg text-zinc-300 leading-relaxed">
-          Specializing in scalable multi-tenant SaaS platforms, modern web architecture, and performant user interfaces, with a commitment to mentoring the next generation of engineers.
+          I have hands-on experience with PHP, JavaScript, Next.js, Node.js, .NET Framework, and MySQL. I bring programming fundamentals, problem-solving ability, database knowledge, and careful testing and debugging habits.
         </p>
         <div className="mt-5 flex flex-wrap gap-2 text-xs text-zinc-400">
-          <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg">Multi-Tenant SaaS</span>
-          <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg">React & Node.js</span>
-          <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg">Tech Mentorship</span>
+          <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg">Frontend & Backend</span>
+          <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg">MySQL & SQL</span>
+          <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-lg">Testing & Debugging</span>
         </div>
       </motion.div>
 

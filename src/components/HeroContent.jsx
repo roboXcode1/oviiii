@@ -1,90 +1,65 @@
-import { motion, useTransform } from "motion/react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react";
 
-export default function HeroContent({ progress }) {
-  // Title stays visible in initial scroll then fades out
-  const titleOpacity = useTransform(progress, [0, 0.18], [1, 0]);
-  const titleY = useTransform(progress, [0, 0.18], [0, -80]);
-  const titleScale = useTransform(progress, [0, 0.18], [1, 0.92]);
+const links = [
+  { label: "Skills", href: "#skills" },
+  { label: "Qualifications", href: "#education" },
+  { label: "About", href: "#about" },
+];
 
-  // Bottom scroll prompt fades out early
-  const scrollPromptOpacity = useTransform(progress, [0, 0.08], [1, 0]);
-
-  // CTA appears near the end of hero sequence
-  const ctaOpacity = useTransform(progress, [0.75, 0.92], [0, 1]);
-  const ctaY = useTransform(progress, [0.75, 0.92], [30, 0]);
-
+export default function HeroContent() {
   return (
-    <>
-      {/* Centered Initial Hero Content */}
-      <motion.div
-        style={{ opacity: titleOpacity, y: titleY, scale: titleScale }}
-        className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center pointer-events-none"
-      >
-        {/* Availability Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-cyan-400/30 backdrop-blur-md mb-6 shadow-lg shadow-cyan-500/10">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-xs sm:text-sm font-medium tracking-wide text-cyan-300">
-            Full-Stack Software Engineer • Web Instructor
-          </span>
+    <section id="hero" className="bg-black px-2 pt-20 sm:px-4 sm:pt-24">
+      <div className="relative mx-auto grid min-h-[calc(100svh-6rem)] max-w-[1800px] grid-cols-1 overflow-hidden rounded-b-[3rem] bg-[#09090b] sm:rounded-b-[4.5rem] md:min-h-[min(760px,calc(100svh-7rem))] md:grid-cols-[0.92fr_1.08fr] lg:grid-cols-[0.95fr_1.05fr]">
+        <div className="relative order-1 flex min-h-[370px] items-center justify-center px-4 py-6 sm:min-h-[460px] md:order-1 md:min-h-0 md:px-6 md:py-8">
+          <div className="relative aspect-[3/4] w-full max-w-[420px] overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl shadow-black/40">
+            <img
+              src="/image.png"
+              alt="Ovi Chowdhury"
+              fetchPriority="high"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
+          </div>
         </div>
 
-        {/* Name Title */}
-        <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight text-white max-w-4xl">
-          MD FAHIM <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500">PRODHAN</span>
-        </h1>
+        <div className="relative order-2 flex items-center px-6 pb-12 pt-6 sm:px-10 sm:pb-16 md:order-2 md:px-10 md:py-14 lg:px-16 xl:px-20">
+          <div className="mx-auto w-full max-w-2xl text-center md:mx-0 md:text-left">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-zinc-400">
+              Hello, I&apos;m Ovi Chowdhury
+            </p>
+            <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              A Web Developer
+              <span className="mt-1 block text-cyan-300">Frontend &amp; Backend</span>
+            </h1>
+            <p className="mt-6 text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8">
+              I&apos;m a CSE undergraduate at AIUB with hands-on experience building web applications using PHP, JavaScript, Next.js, Node.js, .NET Framework, and MySQL. I enjoy solving problems and creating practical, user-friendly solutions.
+            </p>
+            <div className="mt-4 flex items-center justify-center gap-2 text-sm text-zinc-400 md:justify-start">
+              <MapPin className="h-4 w-4 shrink-0" />
+              Bashundhara Residential Area, Dhaka, Bangladesh
+            </div>
 
-        {/* Roles & Tagline */}
-        <p className="mt-4 text-base sm:text-xl md:text-2xl text-zinc-300 max-w-2xl font-light leading-relaxed">
-          Full Stack Developer & Web Instructor building scalable <span className="text-white font-medium">Multi-Tenant SaaS</span> and high-performance interactive web apps.
-        </p>
+            <div className="mt-6 grid gap-3 sm:gap-4">
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="group flex min-h-11 items-center justify-center rounded-md border border-white/15 bg-white/[0.04] px-5 py-2.5 text-sm font-medium text-zinc-100 transition hover:border-cyan-300/50 hover:bg-cyan-300/10 hover:text-cyan-200 md:justify-between"
+                >
+                  <span>{link.label}</span>
+                  <ArrowUpRight className="hidden h-4 w-4 md:block" />
+                </a>
+              ))}
+            </div>
 
-        {/* Quick Tech Badges */}
-        <div className="mt-6 flex flex-wrap justify-center gap-2 max-w-xl">
-          {["React 19", "Node.js", "Multi-Tenant SaaS", "Tailwind CSS", "GSAP"].map((tag) => (
-            <span
-              key={tag}
-              className="text-[11px] sm:text-xs px-3 py-1 rounded-full bg-black/40 border border-white/10 text-zinc-400"
+            <a
+              href="#projects"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-zinc-400 transition hover:text-cyan-300"
             >
-              {tag}
-            </span>
-          ))}
+              View my projects <ArrowDown className="h-4 w-4" />
+            </a>
+          </div>
         </div>
-      </motion.div>
-
-      {/* Initial Scroll Down Indicator */}
-      <motion.div
-        style={{ opacity: scrollPromptOpacity }}
-        className="absolute bottom-10 z-10 flex flex-col items-center justify-center w-full pointer-events-none"
-      >
-        <span className="text-[11px] uppercase tracking-widest text-zinc-400 mb-2 font-medium">
-          Scroll to explore
-        </span>
-        <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-1">
-          <div className="w-1.5 h-2.5 rounded-full bg-cyan-400 animate-bounce" />
-        </div>
-      </motion.div>
-
-      {/* End of Hero CTA */}
-      <motion.div
-        style={{ opacity: ctaOpacity, y: ctaY }}
-        className="absolute bottom-16 z-10 flex flex-col sm:flex-row gap-4 w-full justify-center items-center px-4"
-      >
-        <a
-          href="#experience"
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-teal-400 px-8 py-3.5 font-bold text-black shadow-lg shadow-cyan-500/25 transition hover:scale-105 active:scale-95"
-        >
-          <span>Explore Experience</span>
-          <ArrowDown className="w-4 h-4" />
-        </a>
-
-        <a
-          href="#projects"
-          className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/20 px-7 py-3.5 font-medium text-white backdrop-blur-md transition hover:bg-white/20 hover:scale-105"
-        >
-          View Projects
-        </a>
-      </motion.div>
-    </>
+      </div>
+    </section>
   );
 }
