@@ -13,7 +13,7 @@ export default function HeroContent() {
         <div className="relative order-1 flex min-h-[370px] items-center justify-center px-4 py-6 sm:min-h-[460px] md:order-1 md:min-h-0 md:px-6 md:py-8">
           <div className="relative aspect-[3/4] w-full max-w-[420px] overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 shadow-2xl shadow-black/40">
             <img
-              src="/image.png"
+              src={`${import.meta.env.BASE_URL}image.png`}
               alt="Ovi Chowdhury"
               fetchPriority="high"
               className="absolute inset-0 h-full w-full object-cover object-center"
